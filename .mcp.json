@@ -3,6 +3,14 @@
     "context-mode": {
       "command": "node",
       "args": ["${CLAUDE_PLUGIN_ROOT}/start.mjs"]
+    },
+    "gdrive": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-gdrive"],
+      "env": {
+        "GDRIVE_OAUTH_PATH": "${HOME}/.config/gdrive-mcp/gcp-oauth.keys.json",
+        "GDRIVE_CREDENTIALS_PATH": "${HOME}/.config/gdrive-mcp/credentials.json"
+      }
     }
   }
 }
